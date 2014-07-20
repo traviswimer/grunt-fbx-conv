@@ -78,7 +78,7 @@ module.exports = function(grunt) {
         var filename = fbxFilepath.replace(/^.*[\\\/]/, '');
         filename = (filename.split("."))[0];
 
-        var thing = sh.run( './fbx-conv/' + fbxCommand + ' ' + flipFlag + fbxFilepath );
+        var thing = sh.run( 'LD_LIBRARY_PATH=./fbx-conv ./fbx-conv/' + fbxCommand + ' ' + flipFlag + fbxFilepath );
 
         // Move the g3db file
         var g3dbFilePath = (fbxFilepath.split("."))[0] + '.g3db';
