@@ -59,3 +59,5 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 > There seems to be active development on the [fbx-conv tool](https://github.com/libgdx/fbx-conv) at the moment. If the version of the tool used in this plugin needs updated, feel free to send a pull request.
+
+> The most recent release of fbx-conv can be found at [http://libgdx.badlogicgames.com/fbx-conv/](http://libgdx.badlogicgames.com/fbx-conv/). The contents of the zip file can be used to replace the fbx-conv directory of this plugin.
