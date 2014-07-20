@@ -25,7 +25,15 @@ In your project's Gruntfile, add a section named `fbx_conv` to the data object p
 ```js
 grunt.initConfig({
   fbx_conv: {
-
+    myModels: {
+      options: {
+        os: "linux",
+        flip: true
+      },
+      files: [
+        {src: ['./fbx_models/**/*.fbx'], dest: './g3db_models'}
+      ]
+    }
   },
 });
 ```
@@ -38,5 +46,16 @@ grunt.initConfig({
 * Default: `true`
 * Description: Flips the texture coordinates. Blender exports coordinates in a reverse order, so unless something changes you will probably want to leave this as `true`
 
+### options.os
+
+* Type: `String`
+* Default: `windows`
+* Description: The OS used by your system. Available options are:
+  *   windows
+  *   mac
+  *   linux
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+> There seems to be active development on the [fbx-conv tool](https://github.com/libgdx/fbx-conv) at the moment. If the version of the tool used in this plugin needs updated, feel free to send a pull request.
