@@ -23,7 +23,8 @@ module.exports = function(grunt) {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       flip: true,
-      os: "windows"
+      os: "windows",
+      tool_dir: "./node_modules/grunt-fbx-conv/fbx-conv"
     });
 
     // handle figuring out when the task has completed
@@ -78,7 +79,7 @@ module.exports = function(grunt) {
         var filename = fbxFilepath.replace(/^.*[\\\/]/, '');
         filename = (filename.split("."))[0];
 
-        var thing = sh.run( 'LD_LIBRARY_PATH=./fbx-conv ./fbx-conv/' + fbxCommand + ' ' + flipFlag + fbxFilepath );
+        var thing = sh.run( 'LD_LIBRARY_PATH='+ options.tool_dir +' '+ options.tool_dir + '/' + fbxCommand + ' ' + flipFlag + fbxFilepath );
 
         // Move the g3db file
         var g3dbFilePath = (fbxFilepath.split("."))[0] + '.g3db';

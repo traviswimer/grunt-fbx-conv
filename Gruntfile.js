@@ -32,7 +32,8 @@ module.exports = function(grunt) {
     fbx_conv: {
       myModels: {
         options: {
-          os: "linux"
+          os: "linux",
+          tool_dir: "./fbx-conv"
         },
         files: [
           {src: ['test/fbx_models/**/*.fbx'], dest: 'test/g3db_models'}
