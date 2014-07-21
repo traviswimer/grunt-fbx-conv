@@ -55,6 +55,12 @@ grunt.initConfig({
   *   mac
   *   linux
 
+### options.tool_dir
+
+* Type: `String`
+* Default: `./node_modules/grunt-fbx-conv/fbx-conv`
+* Description: The location of the fbx-conv tool directory. The default is the version of the tool included with this grunt plugin.
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
