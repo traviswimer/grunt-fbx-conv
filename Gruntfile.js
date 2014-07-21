@@ -25,7 +25,10 @@ module.exports = function(grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['test/g3db_models/*.g3db'],
+      tests: [
+        'test/g3db_models/*.g3db',
+        'test/g3db_models/*.png'
+      ],
     },
 
     // Configuration to be run (and then tested).

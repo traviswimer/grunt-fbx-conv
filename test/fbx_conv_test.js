@@ -29,7 +29,7 @@ exports.fbx_conv = {
     done();
   },
   task: function(test) {
-    test.expect(2);
+    test.expect(4);
 
     var model1Path = 'test/g3db_models/cube.g3db';
     var model1Exists = fs.existsSync(model1Path);
@@ -38,6 +38,15 @@ exports.fbx_conv = {
     var model2Path = 'test/g3db_models/monkey.g3db';
     var model2Exists = fs.existsSync(model2Path);
     test.equal(model2Exists, true, 'monkey g3db file should exist');
+
+
+    var texture1Path = 'test/g3db_models/cube.png';
+    var texture1Exists = fs.existsSync(texture1Path);
+    test.equal(texture1Exists, true, 'cube png file should exist');
+
+    var texture2Path = 'test/g3db_models/monkey.png';
+    var texture2Exists = fs.existsSync(texture2Path);
+    test.equal(texture2Exists, true, 'cube png file should exist');
 
     test.done();
   }

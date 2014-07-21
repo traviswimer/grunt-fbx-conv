@@ -85,6 +85,12 @@ module.exports = function(grunt) {
         var g3dbFilePath = (fbxFilepath.split("."))[0] + '.g3db';
         sh.run( 'mv ' + g3dbFilePath + ' ' + f.dest );
 
+
+        // Copy texture files to dest folder
+        var g3dbPathNodes = g3dbFilePath.split("/");
+        var g3dbGlob = g3dbFilePath.replace( g3dbPathNodes[g3dbPathNodes.length-1], "" ) + '*.png';
+        sh.run( 'cp ' + g3dbGlob + ' ' + f.dest );
+
         checkFilesFinished();
 
       });
