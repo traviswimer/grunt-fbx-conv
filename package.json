@@ -1,7 +1,7 @@
 {
   "name": "grunt-fbx-conv",
   "description": "Grunt wrapper for the LibGDX fbx-conv tool used to convert fbx to g3db.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/traviswimer/grunt-fbx-conv",
   "author": {
     "name": "Travis Wimer",
